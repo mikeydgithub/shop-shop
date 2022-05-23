@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -43,14 +43,14 @@ function App() {
         <div>
           <StoreProvider>
           <Nav />
-          <Switch>
-            <Route exact path="/" element={Home} />
-            <Route exact path="/login" element={Login} />
-            <Route exact path="/signup" element={Signup} />
-            <Route exact path="/orderHistory" element={OrderHistory} />
-            <Route exact path="/products/:id" element={Detail} />
-            <Route element={NoMatch} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/signup" element={<Signup />}/>
+            <Route path="/orderHistory" element={<OrderHistory />}/>
+            <Route path="/products/:id" element={<Detail />} />
+            <Route path="*" element={<NoMatch />}/>
+          </Routes>
           </StoreProvider>
         </div>
       </Router>
