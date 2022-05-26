@@ -55,8 +55,9 @@ const resolvers = {
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin
       const order = new Order({ products: args.products });
-      const { products } = await order.populate('products');
       const line_items = [];
+
+      const { products } = await order.populate('products');
 
       for (let i = 0; i < products.length; i++) {
         // generate product id
@@ -83,7 +84,7 @@ const resolvers = {
         payment_method_types: ['card'],
         line_items,
         mode: 'payment',
-        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        success_url: `https://${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
       
