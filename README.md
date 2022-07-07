@@ -9,47 +9,52 @@ https://shoper-shop-app.herokuapp.com
   1. [Title](#Title)
   2. [Usage](#Usage)
   3. [Installation](#Installtion)
-  4. [Story](#Story)
-  5. [Description](#Description)
+  4. [Packages](#Packages)
+  5. [Story](#Story)
+  6. [Description](#Description)
 
 
   ## Usage
 
-  * Using Open Weather API get weather information based on location.
+  * Using stripes payment system you can purchase your favorite cookies, toilet paper, and toys.
 
   ## Installtion
   
   * Node.JS
-  * React 
-  * Axios
-  * Ink
-  * Ink Big Text
-  * Ink Gradient
-  * Meow
+  * BCrypt
+  * Express
+  * GraphQL
+  * Json Web Token
+  * Mongoose
+  * Stripe
+  * React
+  * React Router Dom
   
   ## Story
 
-  As a weather enthusiast
+  As a user looking to shop from home
   
-  I can check the weather in my city
+  I can register an account and login
   
-  By entering the location of the city I want to look up
+  Then I can sort items by categories
   
-  I can also change to see it in ceclius or farenheit
+  And then add my items to my cart
   
-  By clicking on which one I want to see
+  When my cart has everything I want
   
-  I can check the forcast by hour
+  Then I can proceed to checkout
   
-  Or check the 5 day forcast
+  On checkout I am presented with entering my payment information
   
-  I can see a sucess toaster appear when the city I entered is loaded
+  When checkout is complete a confirmation will appear
+  
+  And you will be brought back to the shop home page
 
   ## Description
 
-  A weather application using the Open Weather API to fetch data requests for which ever city or country you would like to find the weather in. 
+  An E-Commerce shopping APP using React using the React Router DOM for the front end and        Mongoose for the back end.
   
-  ![image](https://user-images.githubusercontent.com/94988620/175303754-b26ec5ce-2eb7-44a3-bcf6-9ad012e25d76.png)
+  
 
   
   ## Contribution
