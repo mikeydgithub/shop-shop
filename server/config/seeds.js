@@ -1,9 +1,16 @@
+// config/connection.js
+
+// db requires config/connection.js
 const db = require('./connection');
+
+// import models User, Product, Category from the server/models folder
 const { User, Product, Category } = require('../models');
 
+// data delete request from category async
 db.once('open', async () => {
   await Category.deleteMany();
 
+  // await inserting many categories so more than one can be added in one function
   const categories = await Category.insertMany([
     { name: 'Food' },
     { name: 'Household Supplies' },
@@ -14,8 +21,10 @@ db.once('open', async () => {
 
   console.log('categories seeded');
 
+  // await deleteing many products
   await Product.deleteMany();
 
+  // await product insert many
   const products = await Product.insertMany([
     {
       name: 'Tin of Cookies',
@@ -128,8 +137,10 @@ db.once('open', async () => {
 
   console.log('products seeded');
 
+  // users deletemany
   await User.deleteMany();
 
+  // user create
   await User.create({
     firstName: 'Pamela',
     lastName: 'Washington',
@@ -137,11 +148,13 @@ db.once('open', async () => {
     password: 'password12345',
     orders: [
       {
+        // user with products added
         products: [products[0]._id, products[0]._id, products[1]._id]
       }
     ]
   });
 
+  // user without products added
   await User.create({
     firstName: 'Elijah',
     lastName: 'Holt',

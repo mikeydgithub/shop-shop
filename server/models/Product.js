@@ -1,7 +1,10 @@
+// import mongoose
 const mongoose = require('mongoose');
 
+// create schema and set equal to mongoose
 const { Schema } = mongoose;
 
+// new schema for product
 const productSchema = new Schema({
   name: {
     type: String,
@@ -31,6 +34,8 @@ const productSchema = new Schema({
   }
 });
 
+// mongoose.model takes a string and a constant element
 const Product = mongoose.model('Product', productSchema);
 
+// export Product model
 module.exports = Product;

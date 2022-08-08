@@ -1,5 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
+
+// import models from schemas
 const { User, Product, Category, Order } = require('../models');
+// signtoken from utilities. this will confirm the token and make sure we have the ability to login
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
