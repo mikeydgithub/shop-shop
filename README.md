@@ -2,7 +2,7 @@
 
 # Shop-Shop
 
-https://shoper-shop-app.herokuapp.com
+https://shopper-shop-app.herokuapp.com
 
 
   ## Table of Contents
