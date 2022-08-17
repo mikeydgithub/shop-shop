@@ -52,7 +52,7 @@ https://shopper-shop-app.herokuapp.com
 
   ## Description
 
-  An E-Commerce shopping APP using React using the React Router DOM for the front end and Mongoose for the back end.
+  An E-Commerce shopping APP using React and React Router DOM for the front end and Mongoose for the back end.
   
   ![Screenshot 2022-07-07 145735](https://user-images.githubusercontent.com/94988620/177851126-5efcffb0-2c6d-442c-be2a-1c9c2ae829da.jpg)
 
